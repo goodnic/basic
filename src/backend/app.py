@@ -1,10 +1,6 @@
 from flask import Flask
 
-app = Flask(__name__)
-
-@app.route("/hidden")
-def hello_world():
-    return "Hello World"
-
-if __name__ == "__main__":
-    app.run()
+@staticmethod
+def create_app():
+    app = Flask(__name__)
+    return app
