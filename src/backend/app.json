@@ -1,0 +1,7 @@
+{
+    "scripts": {
+        "dokku": {
+            "predeploy": "cd /app/src/backend && poetry install --no-dev && cd /app/src/frontend && yarn install --prod && yarn build"
+        }
+    }
+}

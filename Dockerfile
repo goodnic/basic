@@ -10,3 +10,6 @@ ENV PATH="/root/.local/bin:${PATH}"
 RUN npm install --global yarn
 
 COPY src /app/src
+
+# move working directory to backend folder
+WORKDIR /app/src/backend
