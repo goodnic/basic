@@ -49,6 +49,7 @@ python-versions = ">=3.7"
 
 [package.dependencies]
 click = ">=8.0"
+importlib-metadata = {version = ">=3.6.0", markers = "python_version < \"3.10\""}
 itsdangerous = ">=2.0"
 Jinja2 = ">=3.0"
 Werkzeug = ">=2.0"
@@ -56,6 +57,22 @@ Werkzeug = ">=2.0"
 [package.extras]
 async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
+
+[[package]]
+name = "importlib-metadata"
+version = "4.11.3"
+description = "Read metadata from Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+zipp = ">=0.5"
+
+[package.extras]
+docs = ["sphinx", "jaraco.packaging (>=9)", "rst.linker (>=1.9)"]
+perf = ["ipython"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "packaging", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "importlib-resources (>=1.3)"]
 
 [[package]]
 name = "itsdangerous"
@@ -185,10 +202,22 @@ python-versions = ">=3.7"
 [package.extras]
 watchdog = ["watchdog"]
 
+[[package]]
+name = "zipp"
+version = "3.8.0"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["sphinx", "jaraco.packaging (>=9)", "rst.linker (>=1.9)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
+
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.10"
-content-hash = "651c32b3ef658db06174a63f452c32d7858b7d1d59b5d3f7c5426a08ccc79f3c"
+python-versions = "^3.9"
+content-hash = "feaed500ce964c6e92ea76db593dc4bf510ab67c648bc0dde561577cb14a6034"
 
 [metadata.files]
 atomicwrites = [
@@ -210,6 +239,10 @@ colorama = [
 flask = [
     {file = "Flask-2.1.2-py3-none-any.whl", hash = "sha256:fad5b446feb0d6db6aec0c3184d16a8c1f6c3e464b511649c8918a9be100b4fe"},
     {file = "Flask-2.1.2.tar.gz", hash = "sha256:315ded2ddf8a6281567edb27393010fe3406188bafbfe65a3339d5787d89e477"},
+]
+importlib-metadata = [
+    {file = "importlib_metadata-4.11.3-py3-none-any.whl", hash = "sha256:1208431ca90a8cca1a6b8af391bb53c1a2db74e5d1cef6ddced95d4b2062edc6"},
+    {file = "importlib_metadata-4.11.3.tar.gz", hash = "sha256:ea4c597ebf37142f827b8f39299579e31685c31d3a438b59f469406afd0f2539"},
 ]
 itsdangerous = [
     {file = "itsdangerous-2.1.2-py3-none-any.whl", hash = "sha256:2c2349112351b88699d8d4b6b075022c0808887cb7ad10069318a8b0bc88db44"},
@@ -295,4 +328,8 @@ wcwidth = [
 werkzeug = [
     {file = "Werkzeug-2.1.2-py3-none-any.whl", hash = "sha256:72a4b735692dd3135217911cbeaa1be5fa3f62bffb8745c5215420a03dc55255"},
     {file = "Werkzeug-2.1.2.tar.gz", hash = "sha256:1ce08e8093ed67d638d63879fd1ba3735817f7a80de3674d293f5984f25fb6e6"},
+]
+zipp = [
+    {file = "zipp-3.8.0-py3-none-any.whl", hash = "sha256:c4f6e5bbf48e74f7a38e7cc5b0480ff42b0ae5178957d564d18932525d5cf099"},
+    {file = "zipp-3.8.0.tar.gz", hash = "sha256:56bf8aadb83c24db6c4b577e13de374ccfb67da2078beba1d037c17980bf43ad"},
 ]
