@@ -1,4 +1,4 @@
-# basic-bitch
+# basic
 
 ## Project setup
 ```
